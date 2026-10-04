@@ -1,0 +1,11 @@
+{
+  "id": "tank-01",
+  "name": "Main Storage Tank",
+  "status": "normal",
+  "level": 72,
+  "capacity": 10000,
+  "temperature": 24.5,
+  "pressure": 1.8,
+  "lastUpdated": "2026-10-04T17:00:00.000Z",
+  "alerts": []
+}

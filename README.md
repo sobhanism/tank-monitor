@@ -1,38 +1,39 @@
-# Quasar App (tank-monitor)
+# Tank Monitor
 
-## Install the dependencies
+A small tank monitoring dashboard built with Vue 3, Quasar, Pinia, TypeScript and Three.js.
 
-```bash
-pnpm install
-# or: yarn/npm/bun install
+## Overview
+
+Tank Monitor is a frontend prototype for monitoring a storage tank through a 3D visualization and a set of operational metrics.
+
+The project demonstrates how mock sensor data flows through a service layer and application state into the UI and 3D visualization.
+
+## Features
+
+- 3D tank visualization using Three.js and GLB
+- Simulated tank level updates
+- Tank level, temperature and pressure metrics
+- Automatic tank status evaluation
+- Warning and critical alerts
+- Responsive dashboard layout
+- Mock service layer simulating API requests
+
+## Architecture
+
+The application follows a simple data flow:
+
+```text
+Mock Data
+   ↓
+tankService
+   ↓
+Pinia Store
+   ↓
+tankRules
+   ↓
+Dashboard
+   ├── Metrics
+   ├── Status
+   ├── Alerts
+   └── 3D Tank
 ```
-
-### Start the app in development mode (HMR, error reporting, etc.)
-
-```bash
-quasar dev
-```
-
-### Format & Lint the files
-
-```bash
-pnpm run lint
-# or: yarn/npm/bun run lint
-```
-
-...or just check formatting & linting:
-
-```bash
-pnpm run lint:check
-# or: yarn/npm/bun run lint:check
-```
-
-### Build the app for production
-
-```bash
-quasar build
-```
-
-### Customize the configuration
-
-See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-vite/quasar-config-file).
